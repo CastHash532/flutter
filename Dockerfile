@@ -61,6 +61,6 @@ RUN curl -o flutter.tar.xz $FLUTTER_URL \
   && flutter emulators --create \
   && flutter update-packages
 
-COPY flutter-web.sh /usr/local/bin/
+COPY flutter-web /usr/local/bin/
 COPY chown.sh /usr/local/bin/
-ENTRYPOINT [ "/usr/local/bin/flutter-web.sh" ]
+ENTRYPOINT [ "/usr/local/bin/flutter-web" ]
